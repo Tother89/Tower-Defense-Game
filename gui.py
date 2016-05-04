@@ -329,9 +329,14 @@ class GUI(LayeredUpdates):
 	def sell_tower(self, pos, tower):
 		tile_pos = self.tile_coord(pos)
 		for tower in self.game_towers:
-			if tile_pos[0] == tower.tile_x and tile_pos[1] == tower.tile_y:
-				self.money += tower.price # refund money
+			if tile_pos[0] == tower.tile_x and tile_pos[1] == tower.tile_y and Tower.get_status(tower):
 				tower.deactivate() # deactivate tower
+				self.money += tower.price* # refund money
+
+
+
+
+
 
 	def quit_game(self):
 		'''

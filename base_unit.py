@@ -63,7 +63,9 @@ Base unit for our towers and wave
                             image_rect.h - text_rect.h)
         # Draw the health on to the image.
         self.image.blit(text_surf, text_rect)
-        
+    def get_status(self):
+        return self._active
+
     def activate(self):
         """
         Adds this unit to the active roster.

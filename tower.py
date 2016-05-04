@@ -31,3 +31,5 @@ class Tower(Base_Unit):
             self.range = 20
         # Load the base class
         super().__init__(**keywords)
+
+
